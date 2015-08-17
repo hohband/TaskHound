@@ -21,6 +21,7 @@
 		D287DBB81B826FDB00B59D0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB71B826FDB00B59D0B /* CoreGraphics.framework */; };
 		D287DBBA1B826FE300B59D0B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB91B826FE300B59D0B /* Security.framework */; };
 		D287DBBC1B82706C00B59D0B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D287DBBB1B82706C00B59D0B /* mapapi.bundle */; };
+		D287DBC11B8273C900B59D0B /* map-bridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = D287DBC01B8273C900B59D0B /* map-bridge.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		D287DBB71B826FDB00B59D0B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D287DBB91B826FE300B59D0B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D287DBBB1B82706C00B59D0B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = "BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos/BaiduMapAPI.framework/Resources/mapapi.bundle"; sourceTree = "<group>"; };
+		D287DBBD1B82739800B59D0B /* TaskHound-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskHound-Bridging-Header.h"; sourceTree = "<group>"; };
+		D287DBC01B8273C900B59D0B /* map-bridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "map-bridge.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +111,14 @@
 		222407E61B821ACA00FA3064 /* TaskHound */ = {
 			isa = PBXGroup;
 			children = (
+				D287DBC01B8273C900B59D0B /* map-bridge.mm */,
 				222407E91B821ACA00FA3064 /* AppDelegate.swift */,
 				222407EB1B821ACA00FA3064 /* ViewController.swift */,
 				222407ED1B821ACA00FA3064 /* Main.storyboard */,
 				222407F01B821ACA00FA3064 /* Images.xcassets */,
 				222407F21B821ACA00FA3064 /* LaunchScreen.xib */,
 				222407E71B821ACA00FA3064 /* Supporting Files */,
+				D287DBBD1B82739800B59D0B /* TaskHound-Bridging-Header.h */,
 			);
 			path = TaskHound;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D287DBC11B8273C900B59D0B /* map-bridge.mm in Sources */,
 				222407EC1B821ACA00FA3064 /* ViewController.swift in Sources */,
 				222407EA1B821ACA00FA3064 /* AppDelegate.swift in Sources */,
 			);
@@ -371,7 +377,9 @@
 		222408041B821ACB00FA3064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = TaskHound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -381,13 +389,18 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskHound/TaskHound-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "TaskHound/Headers/**";
 			};
 			name = Debug;
 		};
 		222408051B821ACB00FA3064 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = TaskHound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -397,6 +410,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskHound/TaskHound-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "TaskHound/Headers/**";
 			};
 			name = Release;
 		};

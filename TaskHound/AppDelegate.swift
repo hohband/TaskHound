@@ -8,16 +8,31 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //截取于 AppDelegate的部分代码
+    // 定义一个 BMKMapManager 用于初始化地图
+    var _mapManager: BMKMapManager?;
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        _mapManager = BMKMapManager();
+        // 如果要关注网络及授权验证事件，请设定     generalDelegate参数，使AppDelegate实现 BMKGeneralDelegate 协议，如果不需要设置为nil
+        // BMKGeneralDelegate 的两个回调方法能给出一定的错误提示
+        var ret:Bool = _mapManager!.start("0WjGcAXGBr7dIDaYuP7Wdltw", generalDelegate: nil);
+        if (!ret) {
+            NSLog("manager start failed!");
+        }
         return true
     }
+    //func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        //return true
+    //}
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
