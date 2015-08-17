@@ -13,7 +13,7 @@ class ViewController: UIViewController,BMKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        mapView = BMKMapView(frame: CGRectMake(0, 0, 320, 480));
+        mapView = BMKMapView(frame: CGRectMake(0, 50, 320, 480));
         mapView!.zoomLevel = 12;
         mapView!.centerCoordinate = CLLocationCoordinate2DMake(39.914, 116.404);
         self.view.addSubview(mapView!);
