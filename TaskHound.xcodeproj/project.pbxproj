@@ -13,6 +13,14 @@
 		222407F11B821ACA00FA3064 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222407F01B821ACA00FA3064 /* Images.xcassets */; };
 		222407F41B821ACA00FA3064 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222407F21B821ACA00FA3064 /* LaunchScreen.xib */; };
 		222408001B821ACB00FA3064 /* TaskHoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222407FF1B821ACB00FA3064 /* TaskHoundTests.swift */; };
+		D287DBAE1B826BC900B59D0B /* BaiduMapAPI in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBAD1B826BC900B59D0B /* BaiduMapAPI */; };
+		D287DBB01B826F9500B59D0B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBAF1B826F9500B59D0B /* CoreLocation.framework */; };
+		D287DBB21B826FA100B59D0B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB11B826FA100B59D0B /* QuartzCore.framework */; };
+		D287DBB41B826FAD00B59D0B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB31B826FAD00B59D0B /* OpenGLES.framework */; };
+		D287DBB61B826FC100B59D0B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB51B826FC100B59D0B /* SystemConfiguration.framework */; };
+		D287DBB81B826FDB00B59D0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB71B826FDB00B59D0B /* CoreGraphics.framework */; };
+		D287DBBA1B826FE300B59D0B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D287DBB91B826FE300B59D0B /* Security.framework */; };
+		D287DBBC1B82706C00B59D0B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D287DBBB1B82706C00B59D0B /* mapapi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		222407F91B821ACA00FA3064 /* TaskHoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskHoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222407FE1B821ACB00FA3064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222407FF1B821ACB00FA3064 /* TaskHoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHoundTests.swift; sourceTree = "<group>"; };
+		D287DBAD1B826BC900B59D0B /* BaiduMapAPI */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = BaiduMapAPI; path = TaskHound/BaiduMapAPI; sourceTree = "<group>"; };
+		D287DBAF1B826F9500B59D0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D287DBB11B826FA100B59D0B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D287DBB31B826FAD00B59D0B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D287DBB51B826FC100B59D0B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D287DBB71B826FDB00B59D0B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D287DBB91B826FE300B59D0B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D287DBBB1B82706C00B59D0B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = "BaiduMap_IOSSDK_v2.8.1_All/BaiduMap_IOSSDK_v2.8.1_Lib/Release-iphoneos/BaiduMapAPI.framework/Resources/mapapi.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D287DBBA1B826FE300B59D0B /* Security.framework in Frameworks */,
+				D287DBB81B826FDB00B59D0B /* CoreGraphics.framework in Frameworks */,
+				D287DBB61B826FC100B59D0B /* SystemConfiguration.framework in Frameworks */,
+				D287DBB41B826FAD00B59D0B /* OpenGLES.framework in Frameworks */,
+				D287DBB21B826FA100B59D0B /* QuartzCore.framework in Frameworks */,
+				D287DBB01B826F9500B59D0B /* CoreLocation.framework in Frameworks */,
+				D287DBAE1B826BC900B59D0B /* BaiduMapAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,14 @@
 		222407DB1B821ACA00FA3064 = {
 			isa = PBXGroup;
 			children = (
+				D287DBBB1B82706C00B59D0B /* mapapi.bundle */,
+				D287DBB91B826FE300B59D0B /* Security.framework */,
+				D287DBB71B826FDB00B59D0B /* CoreGraphics.framework */,
+				D287DBB51B826FC100B59D0B /* SystemConfiguration.framework */,
+				D287DBB31B826FAD00B59D0B /* OpenGLES.framework */,
+				D287DBB11B826FA100B59D0B /* QuartzCore.framework */,
+				D287DBAF1B826F9500B59D0B /* CoreLocation.framework */,
+				D287DBAD1B826BC900B59D0B /* BaiduMapAPI */,
 				222407E61B821ACA00FA3064 /* TaskHound */,
 				222407FC1B821ACB00FA3064 /* TaskHoundTests */,
 				222407E51B821ACA00FA3064 /* Products */,
@@ -193,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222407EF1B821ACA00FA3064 /* Main.storyboard in Resources */,
+				D287DBBC1B82706C00B59D0B /* mapapi.bundle in Resources */,
 				222407F41B821ACA00FA3064 /* LaunchScreen.xib in Resources */,
 				222407F11B821ACA00FA3064 /* Images.xcassets in Resources */,
 			);
@@ -340,8 +372,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = TaskHound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TaskHound",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -350,8 +388,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = TaskHound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TaskHound",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -409,6 +453,7 @@
 				222408051B821ACB00FA3064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		222408061B821ACB00FA3064 /* Build configuration list for PBXNativeTarget "TaskHoundTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +462,7 @@
 				222408081B821ACB00FA3064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
